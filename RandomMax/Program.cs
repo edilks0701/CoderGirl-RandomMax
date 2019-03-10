@@ -6,9 +6,38 @@ namespace RandomMax
     {
         public static void Main()
         {
-            // TODO: Generate a list of 100 random integers between 0 and 1000 and ouput the maximum value.
+
+            int[] num = new int[101];
+            Random r = new Random();
+            int largestNumber;
+
+
+            for (int i = 0; i < 101; i++)
+            {
+                num[i] = r.Next(0, 1001);
+               
+            }
+
+            largestNumber = num[0];
+
+
+            for (int i = 0; i < 101; i++)
+            {
+                if (largestNumber < num[i]) largestNumber = num[i];
+
+               
+
+            }
+            Console.WriteLine(largestNumber);
+
+            
+
 
             Console.ReadLine();
+
+
+
+
         }
     }
 }
